@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: Arial, Helvetica, sans-serif !important; 
+    /* Add !important to overwrite all elements */
+
+}
+html{
+    
+  position: relative;
+  min-height: 100vh;
+}
+body{
+    height: 100%;
+    margin: 0;
+    background-color: #F2F2F2;
+}
+
+/*# sourceMappingURL=styles.css.map*/
