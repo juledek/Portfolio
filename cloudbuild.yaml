@@ -12,5 +12,5 @@ steps:
 
   # Deploy to google cloud app egnine
   - name: 'gcr.io/cloud-builders/gcloud'
-    dir: 'portfolio'
+    entrypoint: 'gcloud'
     args: ['app', 'deploy', '--version=prod']
