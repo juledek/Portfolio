@@ -3,17 +3,14 @@ steps:
   # Install node packages
   - name: 'gcr.io/cloud-builders/npm'
     dir: 'portfolio'
-    entrypoint: "ls"
     args: [ 'install' ]
 
   # Build productive files
   - name: 'gcr.io/cloud-builders/npm'
     dir: 'portfolio'
-    entrypoint: "ls"
     args: [ 'run', 'build', '--prod' ]
 
   # Deploy to google cloud app egnine
   - name: 'gcr.io/cloud-builders/gcloud'
     dir: 'portfolio'
-    entrypoint: "ls"
     args: ['app', 'deploy', '--version=prod']
