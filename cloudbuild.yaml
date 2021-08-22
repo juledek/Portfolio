@@ -1,12 +1,12 @@
 steps:
 
   # Install node packages
-  - name: 'gcr.io/cloud-builders/npm:node-14.10.0'
+  - name: 'gcr.io/cloud-builders/npm:node-12.18.3'
     dir: 'portfolio'
     args: [ 'install' ]
 
   # Build productive files
-  - name: 'gcr.io/cloud-builders/npm:node-14.10.0'
+  - name: 'gcr.io/cloud-builders/npm:node-12.18.3'
     dir: 'portfolio'
     args: [ 'run', 'build', '--prod' ]
 
