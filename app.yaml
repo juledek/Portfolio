@@ -9,13 +9,3 @@ handlers:
 
 - url: /
   static_dir: dist/portfolio
-
-  skip_files:
-  - e2e/
-  - node_modules/
-  - src/
-  - ^(.*/)?\..*$
-  - ^(.*/)?.*\.json$
-  - ^(.*/)?.*\.md$
-  - ^(.*/)?.*\.yaml$
-  - ^LICENSE
