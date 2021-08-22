@@ -1,11 +1,22 @@
+
 runtime: python27
 api_version: 1
 threadsafe: true
 
 handlers:
-- url: /
+
+- url: /api/.*
+  script: main.app
+
+# All files that can be compiled in angular. Luckily, they all have suffixes.
+- url: /(.*\.(css|eot|gz|html|ico|js|map|png|svg|ttf|woff|woff2))
+  static_files: ../client/dist/\1
+  upload: ../client/dist/(.*\.(css|eot|gz|html|ico|js|map|png|svg|ttf|woff|woff2))
+
+# Site root, plus anything else, like deep urls
+# Make this be secure, otherwise oauth redirect won't work if they want to us with http://
+- url: /.*
   static_files: dist/portfolio/index.html
   upload: dist/portfolio/index.html
-
-- url: /
-  static_dir: dist/portfolio
+  secure: always
+  expiration: "15m"
