@@ -8,7 +8,7 @@ steps:
 
   # Build productive files
   - name: 'gcr.io/cloud-builders/npm'
-    dir: 'front-end-webapp'
+    dir: 'portfolio'
     entrypoint: "ls"
     args: [ 'run', 'build', '--prod' ]
 
