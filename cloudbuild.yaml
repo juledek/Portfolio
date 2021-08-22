@@ -1,17 +1,17 @@
 steps:
 
   # Install node packages
-  - name: 'gcr.io/cloud-builders/npm:node-14.15.1'
+  - name: 'gcr.io/cloud-builders/npm:node-14.10.0'
     dir: 'portfolio'
     args: [ 'install' ]
 
   # Build productive files
-  - name: 'gcr.io/cloud-builders/npm'
+  - name: 'gcr.io/cloud-builders/npm:node-14.10.0'
     dir: 'portfolio'
     args: [ 'run', 'build', '--prod' ]
 
   # Deploy to google cloud app egnine
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  - name: 'gcr.io/cloud-builders/gcloud'
     args: ['app', 'deploy', '--version=prod']
     timeout: '1600s'
     
