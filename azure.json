@@ -1,0 +1,17 @@
+{
+  "hosting": [
+    {
+      "app": {
+        "project": "portfolio",
+        "target": "build",
+        "configuration": "production",
+        "path": "dist/portfolio"
+      },
+      "azureHosting": {
+        "subscription": "7ce5f13c-62d7-445c-9f89-9af1a8df44c6",
+        "resourceGroupName": "portfolio-static-deploy26",
+        "account": "portfoliostatic"
+      }
+    }
+  ]
+}
