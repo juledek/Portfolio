@@ -1,7 +1,7 @@
 steps:
 
   # Install node packages
-  - name: 'gcr.io/cloud-builders/npm:14.15.1'
+  - name: 'gcr.io/cloud-builders/npm:node-14.15.1'
     dir: 'portfolio'
     args: [ 'install' ]
 
