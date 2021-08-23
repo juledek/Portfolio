@@ -16,3 +16,21 @@ body{
     margin: 0;
     background-color: #F2F2F2;
 }
+
+/* scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7B8C80;
+  border-radius: 10px;
+}

@@ -6,10 +6,12 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    padding-bottom: 7em;
     width: 90%;
     color: #7B8C80;
     font-size: 18px;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 80vh;
 }
 
 .block{
@@ -18,7 +20,11 @@
     align-items: center;
     justify-content: space-evenly;
     padding-bottom: 2em; 
+    height: 80vh;
+    scroll-snap-align: start;
 }
+
+
 
 .imgbox{
     position:relative;

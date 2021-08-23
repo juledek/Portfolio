@@ -1,22 +1,18 @@
 
 
 .container{
+    
+    background-color: #143B40;
+    color: #F2F2F2;
     width: 100%;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
     overflow: hidden;
-    padding-bottom: 7em;
-}
-
-
-.box{
-    position: absolute;
-    width: 100%;
-    background-color: #F2F2F2;
-    height: 60%;
+    padding: 0px;
 }
 
 .content{
@@ -24,14 +20,14 @@
     margin-right: auto;
     margin-left: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-around;
     
 }
 
 img{
-    width: 100%;
+    height: 35vh;
 }
 .image img{
     border-radius: 50%;
@@ -46,6 +42,18 @@ img{
     margin: 1em;
 }
 
+/*text*/
+h2{
+    opacity: 0.7;
+}
+h4, h5{
+    opacity: 0.5;
+}
+
+.smallAbout{
+    width: 40vh;
+}
+
 @media only screen and (min-width: 992px){
     .content {
         max-width: 960px;
@@ -55,11 +63,13 @@ img{
 @media only screen and (max-width: 768px){
     .content {
         max-width: 720px;
+        height: 90vh;
     }
 }
 
 @media only screen and (max-width: 576px){
     .content {
         max-width: 540px;
+        height: 90vh;
     }
 }
