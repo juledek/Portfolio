@@ -14,5 +14,5 @@ steps:
   - name: 'gcr.io/cloud-builders/gcloud'
     args: ['app', 'deploy', '--version=prod']
   
-  timeout: 9000s
+timeout: 9000s
     
