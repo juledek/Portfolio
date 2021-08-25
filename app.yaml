@@ -5,23 +5,18 @@ threadsafe: true
 
 handlers:
 
-  - url: /api/.*
-    script: main.app
-
-  # All files that can be compiled in angular. Luckily, they all have suffixes.
-  - url: /(.*\.(css|eot|gz|html|ico|js|map|png|svg|ttf|woff|woff2))
-    static_files: ../client/dist/\1
-    upload: ../client/dist/(.*\.(css|eot|gz|html|ico|js|map|png|svg|ttf|woff|woff2))
-
-  # Site root, plus anything else, like deep urls
-  # Make this be secure, otherwise oauth redirect won't work if they want to us with http://
-  - url: /.*
+  - url: /
     static_files: dist/portfolio/index.html
     upload: dist/portfolio/index.html
-    secure: always
-    expiration: "15m"
+  - url: /
+    static_dir: dist/portfolio
 
 skip_files:
   - e2e/
   - node_modules/
+  - src/
+  - ^(.*/)?\..*$
+  - ^(.*/)?.*\.json$
+  - ^(.*/)?.*\.md$
+  - ^(.*/)?.*\.yaml$
   - ^LICENSE
