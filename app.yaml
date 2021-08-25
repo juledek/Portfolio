@@ -30,3 +30,4 @@ skip_files:
   - ^(.*/)?.*\.md$
   - ^(.*/)?.*\.yaml$
   - ^LICENSE
+  - .github/
