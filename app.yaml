@@ -24,8 +24,4 @@ handlers:
 skip_files:
   - e2e/
   - node_modules/
-  - ^(.*/)?\..*$
-  - ^(.*/)?.*\.json$
-  - ^(.*/)?.*\.md$
-  - ^(.*/)?.*\.yaml$
   - ^LICENSE
